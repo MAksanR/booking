@@ -385,3 +385,43 @@ body { background-color: var(--bg); color: #333; padding-bottom: 50px; }
         font-size: 1.2rem;
     }
 }
+
+/* Make tables horizontally scrollable on small screens and improve touch targets */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.jadwal-table {
+    min-width: 700px;
+}
+
+@media (max-width: 700px) {
+    .container { padding: 0 12px; }
+
+    .jadwal-table { min-width: 600px; }
+
+    .jadwal-table th, .jadwal-table td {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+
+    .btn-delete {
+        padding: 10px 14px;
+        font-size: 0.95rem;
+    }
+
+    .btn-book { padding: 12px; font-size: 1rem; }
+
+    /* Reduce modal margin on small screens */
+    .modal-content { margin: 6% auto; width: 95%; max-width: 420px; padding: 20px; }
+
+    /* Improve navbar spacing */
+    .nav-links a { font-size: 1rem; padding: 12px 16px; }
+}
+
+@media (max-width: 420px) {
+    .jadwal-table { min-width: 520px; }
+    .section-title { font-size: 1rem; }
+    .logo { font-size: 1.05rem; }
+}
